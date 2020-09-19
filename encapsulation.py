@@ -1,3 +1,4 @@
+ # creating a class with a private variable 'origin'
 class Company:
     def __init__(self, name, net_worth, rating):
         self.name = name
@@ -17,8 +18,17 @@ class Company:
     def set_origin(self, val):
         self.__origin = val
 
-comp1 = Company("apple", "20000000000", 5)
+#creating a company object
+comp1 = Company("Apple", "20000000000", 5)
+
+# changing origin from the class function
 comp1.set_origin("Indonesia")
 print(comp1.get_data())
+
+#changing private variable from outside of the class
 comp1.__origin = "Pakistan"
+print(comp1.get_data())
+
+#changing other variables from outside of the class
+comp1.name = "Microsoft"
 print(comp1.get_data())
