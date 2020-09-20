@@ -13,8 +13,7 @@ class Teacher(Person):
         super().__init__(name, age)
         self.salary = salary
 
-    #overriding method
-    def show_data(self):
+    def show(self):
         return 'my name is ' + self.name + ', I am ' + str(self.age) + ' years old and my salary is ' + str(self.salary) 
 
 #parent object 
@@ -23,4 +22,4 @@ print(p1.show_data())
 
 #child object inheriting properties from parent
 t1 = Teacher("Dhruv", 19, 20000)
-print(t1.show_data())
+print(t1.show())
